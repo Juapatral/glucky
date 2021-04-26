@@ -1,0 +1,6 @@
+gcloud dataflow jobs run unzip \
+--gcs-location gs://dataflow-templates-us-east1/latest/Bulk_Decompress_GCS_Files \
+--region us-east1 \
+--num-workers 1 \
+--staging-location gs://glucky_parte2/temp \
+--parameters inputFilePattern=gs://glucky_parte2/Informacion_Base/*.gz,outputDirectory=gs://glucky_parte2/descomprimido/,outputFailureFile=gs://glucky_parte2/decomperror.txt
